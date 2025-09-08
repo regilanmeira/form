@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+    background-image: url("image.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    height: 100vh;   
+}
+
+.text{
+    color: yellowgreen;
+    text-align: center;
+}
+
+.buttons{
+    text-align: center;
+}
+
+    </style>
+
+
+    <div class="text">
+        <p id="a">VAI NEYMAR JR!!!</p>
+    </div>
+    <div class="buttons">
+        <button type="button" id="b" onclick="trade()">TROCAR</button>
+        <button type="button" id="c" onclick="returnTrade()" style="display: none;">VOLTAR</button>
+    </div>
+
+    <script>
+        const a = document.getElementById("a");
+const b = document.getElementById("b");
+const c = document.getElementById("c");
+
+const textoOriginal = a.innerText;
+
+const trade = () =>{
+    let texto = "";
+    for(let i = textoOriginal.length - 1; i >= 0; i--){
+        texto += textoOriginal.charAt(i)
+    }
+    a.innerText = texto;
+    c.style.display = "inline";
+} 
+
+const returnTrade = () =>{
+    a.innerText = textoOriginal;
+    c.style.display = "none";
+}
+
+    </script>
+</body>
+</html>
