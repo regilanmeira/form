@@ -9,7 +9,7 @@
 <body>
     
    <form action="index.php" method="post">
-    <a href=""><button type:"button">Enviar para index</button></a>     
+    <a href=""><button type:"button">Enviar para neymar junior</button></a>     
    
    </form>
 
